@@ -12,24 +12,24 @@
 <style>
 
 
-/* ===== 반응형 웹 디자인을 위한 미디어 쿼리 ===== */
 
-/* 화면 너비가 1200px 이하일 때 적용 (작은 노트북, 큰 태블릿 가로 모드) */
+
+
 @media (max-width: 1200px) {
   .wrapper {
-    gap: 24px; /* 콘텐츠 간격을 조금 줄임 */
+    gap: 24px; 
   }
-  /* 오른쪽 이미지를 숨겨서 공간 확보 */
+  
   .side-img.right {
     display: none;
   }
 }
 
-/* 화면 너비가 900px 이하일 때 적용 (일반 태블릿, 모바일) */
+
 @media (max-width: 900px) {
   .wrapper {
-    flex-direction: column; /* 아이템을 세로로 쌓음 */
-    align-items: center; /* 가운데 정렬 */
+    flex-direction: column; 
+    align-items: center; 
     padding: 0 20px; 
   }
   .side-panel, .sections {
@@ -37,13 +37,13 @@
     max-width: 700px; 
   }
   .side-panel {
-    position: static; /* sticky 기능을 해제하고 일반 블록처럼 스크롤되게 함 */
-    max-height: none; /* 높이 제한 해제 */
-    margin-top: 20px !important; /* 위 요소와 간격 확보, !important로 JS 스타일 덮어쓰기 */
-    order: 2; /* 콘텐츠(카드) 섹션보다 아래에 표시되도록 순서 변경 */
+    position: static; 
+    max-height: none; 
+    margin-top: 20px !important; 
+    order: 2; 
   }
   .sections {
-      order: 1; /* 왼쪽 패널보다 위에 표시 */
+      order: 1; 
   }
   .sections .region h2 {
     max-width: 100%; 
@@ -153,7 +153,7 @@ gap: 48px; }
   font-weight: bold; margin-bottom: 10px;
 }
 
-/* ===== [아이디어 1, 2, 3] 왼쪽 사이드 패널 공통 스타일 ===== */
+/* ===== 왼쪽 사이드 패널 공통 스타일 ===== */
 .side-panel {
   width: 200px;
   position: sticky;
@@ -178,7 +178,7 @@ gap: 48px; }
   color: #7c5c48;
 }
 
-/* ===== [아이디어 1] 목차 메뉴 스타일 ===== */
+/* =====  목차 메뉴 스타일 ===== */
 .toc-menu ul { list-style: none; padding: 0; margin: 0; }
 .toc-menu li a {
   text-decoration: none; color: #7c5c48;
@@ -186,14 +186,14 @@ gap: 48px; }
 }
 .toc-menu li a:hover { color: #ff7043; }
 
-/* ===== [아이디어 2] 정보 패널 스타일 ===== */
+/* ===== 정보 패널 스타일 ===== */
 .info-panel #current-region-title { font-size: 1.1rem; margin-bottom: 5px; }
 .info-panel #current-region-count {
   font-size: 0.9rem; color: #555;
   margin: 0; font-weight: bold;
 }
 
-/* ===== [아이디어 3] 미니 캘린더 스타일 ===== */
+/* =====  미니 캘린더 스타일 ===== */
 .calendar-widget .calendar-header {
   text-align: center;
   font-weight: bold;
@@ -422,7 +422,7 @@ gap: 48px; }
     }
 
 
-    // ===== [아이디어 3] 미니 캘린더 로직 =====
+    // =====  미니 캘린더 로직 =====
     function getDeadlines() {
         const deadlines = {};
         document.querySelectorAll('.card').forEach(card => {
@@ -513,7 +513,7 @@ gap: 48px; }
     }, { threshold: 0.1 });
     document.querySelectorAll('.card').forEach(card => cardShowObserver.observe(card));
 
-    // ===== [수정] 스크롤 시 updateSidePanel 함수 호출 =====
+    // =====  스크롤 시 updateSidePanel 함수 호출 =====
     const infoPanelObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -524,7 +524,7 @@ gap: 48px; }
     document.querySelectorAll('section.region').forEach(section => infoPanelObserver.observe(section));
 
 
-    // ===== [수정] 필터 버튼 클릭 시 updateSidePanel 함수 호출 =====
+    // =====  필터 버튼 클릭 시 updateSidePanel 함수 호출 =====
     const filterButtons = document.querySelectorAll('#filter-buttons button');
     filterButtons.forEach(button => {
       button.addEventListener('click', (e) => {
