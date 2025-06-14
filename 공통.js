@@ -1,21 +1,19 @@
 // ===== 공통 스크립트  =====
 
 //네비게이션 시계
+const clock = document.createElement("div");
+clock.id = "clock";
 
-  const clock = document.createElement("div");
-  clock.id = "clock";
-  clock.style.position = "fixed";
-  clock.style.top = "24px";
-  clock.style.left = "50%";
-  clock.style.transform = "translateX(-50%)";
-  clock.style.fontSize = "14px";
-  clock.style.fontWeight = "bold";
-  document.body.appendChild(clock);
 
-  setInterval(() => {
+const navContainer = document.querySelector('.nav-container');
+if (navContainer) {
+    navContainer.appendChild(clock); // 시계를 .nav-container에 직접 추가
+}
+
+setInterval(() => {
     const now = new Date();
-    clock.textContent = now.toLocaleTimeString();
-  }, 1000);
+    clock.textContent = now.toLocaleTimeString(); 
+}, 1000);
 
 
 // 반응형 햄버거 버튼
