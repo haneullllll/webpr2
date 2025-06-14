@@ -54,7 +54,19 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      position: relative;
     }
+
+    #clock {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1rem;     
+    font-weight: 600;    
+    color: #4a3f35;      
+    margin-left: 24px;  
+  }
 
     /*로고  css */
     .logo-img{
@@ -66,6 +78,8 @@
     .menu {
       display: flex;
       gap: 36px;
+      position: relative;
+      top: 7px;
     }
 
     .menu a {
