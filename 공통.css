@@ -39,6 +39,7 @@
       background: linear-gradient(180deg, #fffdf7 0%, #fefcf3 100%);
       background-color: #fffdf7;
       color: #333;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
 
     /* ===== 네비 (상단 메뉴) ===== */
@@ -52,20 +53,23 @@
       margin: 0 auto;
       padding: 0px 24px;
       display: flex;
-      align-items: center;
+      align-items: cross-axis;
       justify-content: space-between;
       position: relative;
     }
 
+
+    
+/* 네비게이션 바에 추가된 시계 스타일 */
     #clock {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    font-size: 1rem;     
-    font-weight: 600;    
-    color: #4a3f35;      
-    margin-left: 24px;  
+    font-size: 1rem;      /* 메뉴와 비슷한 크기 */
+    font-weight: 600;     /* 메뉴와 동일한 굵기 */
+    color: #4a3f35;      /* 메뉴와 동일한 색상 */
+    margin-left: 24px;  /* 메뉴와의 간격 */
   }
 
     /*로고  css */
@@ -76,8 +80,10 @@
 
 
     .menu {
+
       display: flex;
       gap: 36px;
+
       position: relative;
       top: 7px;
     }
