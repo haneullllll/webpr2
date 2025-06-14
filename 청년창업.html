@@ -135,6 +135,7 @@
         flex: 1;
         margin-left: 60px; /* 햄버거 버튼 공간 확보 */
         padding: 20px;
+        padding-top: 70px;
         transition: margin-left 0.3s ease;
         width: calc(100% - 60px);
     }
@@ -266,7 +267,7 @@
   <nav>
     <div class="nav-container">
       <div class="logo">
-        <a href = "index.html">
+        <a href = "home.html">
             <img src = "곰두리_16.png" alt = "로고" class = "logo-img">
         </a>
         </div>
@@ -276,7 +277,11 @@
         <a href="청년창업.html">청년창업</a>
         <a href="K-패스.html">K-패스</a>
       </div>
-       
+        <button class="hamburger-menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        </button>
     </div>
   </nav>
   <!-- 햄버거 버튼 -->
@@ -523,36 +528,7 @@
 <footer>
     Copyright © 2025. All rights reserved.
   </footer>
-<script>
-    const clock = document.createElement("div");
-  clock.id = "clock";
-  clock.style.position = "fixed";
-  clock.style.top = "24px";
-  clock.style.left = "50%";
-  clock.style.transform = "translateX(-50%)";
-  clock.style.fontSize = "14px";
-  clock.style.fontWeight = "bold";
-  document.body.appendChild(clock);
 
-  setInterval(() => {
-    const now = new Date();
-    clock.textContent = now.toLocaleTimeString();
-  }, 1000);
-
-  
-//had부분 페이지 입장 시 메인글 애니메이션 효과
-
-    window.onload = function () {
-      //had부분 페이지 오픈시 애니메이션 효과
-     const had = document.querySelector(".had");
-     had.style.opacity = 0; //had style 투명도 0
-
-     //0.1초후 opacity값 1을주고 2.5초동안 애니메이션 효과 적용
-      setTimeout(() => {
-      had.style.transition = "opacity 2.5s"; 
-      had.style.opacity = 1;
-     }, 100);  
-    }
-</script>
+  <script src="공통.js"></script>
 </body>
 </html>
